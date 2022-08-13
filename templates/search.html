@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+<h1>Найдено кандидатов {{ count }}</h1>
+
+{% for i in candidates_list %}
+    <p><a href="/candidate/{{ i['id'] }}"> {{ i['name'] }}</a></p>
+{% endfor %}
+{% endblock %}
